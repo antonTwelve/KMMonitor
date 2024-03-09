@@ -10,10 +10,12 @@
 **如何启动**
 解压到你要放这玩意的地方，双击exe，完事。
 启动后不会有界面，到右下角找托盘图标点击打开。
+
 ![image](https://github.com/antonTwelve/KMMonitor/assets/88929910/6ced1f10-4c38-4d54-937b-843be1e1fb39)
 
 **如何设置开机自启动**
 启动之后右下角找托盘图标，右键，点开机自启动。
+
 ![image](https://github.com/antonTwelve/KMMonitor/assets/88929910/ccc1c88e-304a-49d9-9673-84d99a0def74)
 
 **开源吗**
