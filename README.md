@@ -3,7 +3,7 @@
 
 基于vue和libhv
 
-[下载](https://github.com/antonTwelve/KMMonitor/releases/download/KMMonitor/KMMonitor_0.1.zip)
+[下载](https://github.com/antonTwelve/KMMonitor/releases/download/KMMonitor-v0.1/KMMonitor_0.1.zip)
 
 界面如下：
 
