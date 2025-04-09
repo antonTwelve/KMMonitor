@@ -1,0 +1,176 @@
+<script setup>
+import { onMounted } from "vue";
+import key from "./keyStyle/key1.vue";
+
+const props = defineProps(["key_count", "key_color"]);
+
+function set_key_width() {
+    let windowWidth = window.innerWidth;
+    let key_width = parseInt((windowWidth - 300) / 30);
+    if (key_width > 50) key_width = 50;
+    else if (key_width < 48) key_width = 48;
+    document.documentElement.style.setProperty('--key-height', `${key_width}px`);
+}
+
+onMounted(() => {
+    set_key_width();
+    window.addEventListener("resize", () => {
+        set_key_width();
+    })
+});
+
+</script>
+<template>
+    <div id="keyboard_wrapper">
+        <div class="flex_block key_board_line t_key">
+            <key keyname="Esc" :keycount="props.key_count[27]" :keycolor="props.key_color[27]"
+                style="width: calc(1 * var(--key-height));" />
+            <key keyname="F1" :keycount="props.key_count[112]" :keycolor="props.key_color[112]" />
+            <key keyname="F2" :keycount="props.key_count[113]" :keycolor="props.key_color[113]" />
+            <key keyname="F3" :keycount="props.key_count[114]" :keycolor="props.key_color[114]" />
+            <key keyname="F4" :keycount="props.key_count[115]" :keycolor="props.key_color[115]" />
+            <key keyname="F5" :keycount="props.key_count[116]" :keycolor="props.key_color[116]" />
+            <key keyname="F6" :keycount="props.key_count[117]" :keycolor="props.key_color[117]" />
+            <key keyname="F7" :keycount="props.key_count[118]" :keycolor="props.key_color[118]" />
+            <key keyname="F8" :keycount="props.key_count[119]" :keycolor="props.key_color[119]" />
+            <key keyname="F9" :keycount="props.key_count[120]" :keycolor="props.key_color[120]" />
+            <key keyname="F10" :keycount="props.key_count[121]" :keycolor="props.key_color[121]" />
+            <key keyname="F11" :keycount="props.key_count[122]" :keycolor="props.key_color[122]" />
+            <key keyname="F12" :keycount="props.key_count[123]" :keycolor="props.key_color[123]" />
+            <key keyname="PrtSc" :keycount="props.key_count[44]" :keycolor="props.key_color[44]" />
+            <key keyname="Ins" :keycount="props.key_count[45]" :keycolor="props.key_color[45]" />
+            <key keyname="Del" :keycount="props.key_count[46]" :keycolor="props.key_color[46]"
+                style="width: calc(1 * var(--key-height));" />
+        </div>
+        <div class="flex_block key_board_line">
+            <key keyname="` ~" :keycount="props.key_count[192]" :keycolor="props.key_color[192]" />
+            <key keyname="1 !" :keycount="props.key_count[49]" :keycolor="props.key_color[49]" />
+            <key keyname="2 @" :keycount="props.key_count[50]" :keycolor="props.key_color[50]" />
+            <key keyname="3 #" :keycount="props.key_count[51]" :keycolor="props.key_color[51]" />
+            <key keyname="4 $" :keycount="props.key_count[52]" :keycolor="props.key_color[52]" />
+            <key keyname="5 %" :keycount="props.key_count[53]" :keycolor="props.key_color[53]" />
+            <key keyname="6 ^" :keycount="props.key_count[54]" :keycolor="props.key_color[54]" />
+            <key keyname="7 &" :keycount="props.key_count[55]" :keycolor="props.key_color[55]" />
+            <key keyname="8 *" :keycount="props.key_count[56]" :keycolor="props.key_color[56]" />
+            <key keyname="9 (" :keycount="props.key_count[57]" :keycolor="props.key_color[57]" />
+            <key keyname="0 )" :keycount="props.key_count[48]" :keycolor="props.key_color[48]" />
+            <key keyname="- _" :keycount="props.key_count[189]" :keycolor="props.key_color[189]" />
+            <key keyname="= +" :keycount="props.key_count[187]" :keycolor="props.key_color[187]" />
+            <key keyname="⬅ Back" :keycount="props.key_count[8]" :keycolor="props.key_color[8]"
+                style="width: calc(2.3 * var(--key-height));" />
+        </div>
+        <div class="flex_block key_board_line">
+            <key keyname="Tab" :keycount="props.key_count[9]" :keycolor="props.key_color[9]"
+                style="width: calc(1.65 * var(--key-height));" />
+            <key keyname="Q" :keycount="props.key_count[81]" :keycolor="props.key_color[81]" />
+            <key keyname="W" :keycount="props.key_count[87]" :keycolor="props.key_color[87]" />
+            <key keyname="E" :keycount="props.key_count[69]" :keycolor="props.key_color[69]" />
+            <key keyname="R" :keycount="props.key_count[82]" :keycolor="props.key_color[82]" />
+            <key keyname="T" :keycount="props.key_count[84]" :keycolor="props.key_color[84]" />
+            <key keyname="Y" :keycount="props.key_count[89]" :keycolor="props.key_color[89]" />
+            <key keyname="U" :keycount="props.key_count[85]" :keycolor="props.key_color[85]" />
+            <key keyname="I" :keycount="props.key_count[73]" :keycolor="props.key_color[73]" />
+            <key keyname="O" :keycount="props.key_count[79]" :keycolor="props.key_color[79]" />
+            <key keyname="P" :keycount="props.key_count[80]" :keycolor="props.key_color[80]" />
+            <key keyname="[ {" :keycount="props.key_count[219]" :keycolor="props.key_color[219]" />
+            <key keyname="] }" :keycount="props.key_count[221]" :keycolor="props.key_color[221]" />
+            <key keyname="\ |" :keycount="props.key_count[220]" :keycolor="props.key_color[220]"
+                style="width: calc(1.65 * var(--key-height));" />
+        </div>
+        <div class="flex_block key_board_line">
+            <key keyname="CapsLock" :keycount="props.key_count[20]" :keycolor="props.key_color[20]"
+                style="width: calc(2.04 * var(--key-height));" />
+            <key keyname="A" :keycount="props.key_count[65]" :keycolor="props.key_color[65]" />
+            <key keyname="S" :keycount="props.key_count[83]" :keycolor="props.key_color[83]" />
+            <key keyname="D" :keycount="props.key_count[68]" :keycolor="props.key_color[68]" />
+            <key keyname="F" :keycount="props.key_count[70]" :keycolor="props.key_color[70]" />
+            <key keyname="G" :keycount="props.key_count[71]" :keycolor="props.key_color[71]" />
+            <key keyname="H" :keycount="props.key_count[72]" :keycolor="props.key_color[72]" />
+            <key keyname="J" :keycount="props.key_count[74]" :keycolor="props.key_color[74]" />
+            <key keyname="K" :keycount="props.key_count[75]" :keycolor="props.key_color[75]" />
+            <key keyname="L" :keycount="props.key_count[76]" :keycolor="props.key_color[76]" />
+            <key keyname="; :" :keycount="props.key_count[186]" :keycolor="props.key_color[186]" />
+            <key keyname="'" :keycount="props.key_count[222]" :keycolor="props.key_color[222]" />
+            <key keyname="Enter" :keycount="props.key_count[13]" :keycolor="props.key_color[13]"
+                style="width: calc(2.56 * var(--key-height));" />
+        </div>
+        <div class="flex_block key_board_line">
+            <key keyname="Shift" :keycount="props.key_count[160]" :keycolor="props.key_color[160]"
+                style="width: calc(2.6 * var(--key-height));" />
+            <key keyname="Z" :keycount="props.key_count[90]" :keycolor="props.key_color[90]" />
+            <key keyname="X" :keycount="props.key_count[88]" :keycolor="props.key_color[88]" />
+            <key keyname="C" :keycount="props.key_count[67]" :keycolor="props.key_color[67]" />
+            <key keyname="V" :keycount="props.key_count[86]" :keycolor="props.key_color[86]" />
+            <key keyname="B" :keycount="props.key_count[66]" :keycolor="props.key_color[66]" />
+            <key keyname="N" :keycount="props.key_count[78]" :keycolor="props.key_color[78]" />
+            <key keyname="M" :keycount="props.key_count[77]" :keycolor="props.key_color[77]" />
+            <key keyname=", <" :keycount="props.key_count[188]" :keycolor="props.key_color[188]" />
+            <key keyname=". >" :keycount="props.key_count[190]" :keycolor="props.key_color[190]" />
+            <key keyname="/ ?" :keycount="props.key_count[191]" :keycolor="props.key_color[191]" />
+            <key keyname="Shift" :keycount="props.key_count[161]" :keycolor="props.key_color[161]"
+                style="width: calc(3.3 * var(--key-height));" />
+        </div>
+        <div class="flex_block key_board_line">
+            <key keyname="Ctrl" style="width: calc(1.3 * var(--key-height))" :keycount="props.key_count[162]"
+                :keycolor="props.key_color[162]" />
+            <key keyname="Fn" />
+            <key keyname="Win" :keycount="props.key_count[91]" :keycolor="props.key_color[91]" />
+            <key keyname="Alt" style="width: calc(1 * var(--key-height))" :keycount="props.key_count[164]"
+                :keycolor="props.key_color[164]" />
+            <key keyname=" " style="width: calc(6.2 * var(--key-height))" :keycount="props.key_count[32]"
+                :keycolor="props.key_color[32]" />
+            <key keyname="Alt" style="width: calc(1 * var(--key-height))" :keycount="props.key_count[165]"
+                :keycolor="props.key_color[165]" />
+            <key keyname="Ctrl" style="width: calc(1 * var(--key-height))" :keycount="props.key_count[163]"
+                :keycolor="props.key_color[163]" />
+            <div class="flex_center" style="flex-direction: column;">
+                <key class="d_key" keyname="↑" :keycount="props.key_count[38]" :keycolor="props.key_color[38]"
+                    style="margin-bottom: calc(0.1 * var(--key-height));" />
+                <div class="flex_block">
+                    <key class="d_key" keyname="←" :keycount="props.key_count[37]" :keycolor="props.key_color[37]" />
+                    <key class="d_key" keyname="↓" :keycount="props.key_count[40]" :keycolor="props.key_color[40]" />
+                    <key class="d_key" keyname="→" :keycount="props.key_count[39]" :keycolor="props.key_color[39]" />
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<style scoped>
+.blank {
+    opacity: 0;
+    margin: 0 calc(0.15 * var(--key-height));
+}
+
+.blank_type_1 {
+    width: calc(0.15 * var(--key-height));
+}
+
+.flex_block {
+    display: flex;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key_board_line {
+    margin: calc(0.2 * var(--key-height)) 0;
+}
+
+div {
+    user-select: none;
+}
+
+.d_key {
+    height: calc(0.45 * var(--key-height));
+    width: calc(1.1 * var(--key-height));
+    margin: 0 calc(0.2 * var(--key-height));
+}
+
+.t_key>* {
+    height: calc(0.6 * var(--key-height));
+    width: calc(0.91 * var(--key-height));
+}
+</style>./keyStyle/key1.vue

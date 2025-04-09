@@ -25,18 +25,6 @@
 
 ![image](https://github.com/antonTwelve/KMMonitor/assets/88929910/ccc1c88e-304a-49d9-9673-84d99a0def74)
 
-**开源吗**
-
-暂时不开
-
-开毛线
-
-代码写的跟屎一样
-
-水平不如GPT
-
-这代码我自己都看不懂
-
 ------
 
 ## 注意：
